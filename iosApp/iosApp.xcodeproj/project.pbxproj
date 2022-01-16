@@ -11,6 +11,7 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* DashboardView.swift */; };
+		7FDCB5532794DB7500D57F75 /* Day3ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCB5522794DB7500D57F75 /* Day3ContentView.swift */; };
 		7FE5C8F827944150008839CA /* Day1ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE5C8F727944150008839CA /* Day1ContentView.swift */; };
 		7FE5C8FB279441D9008839CA /* Day2ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE5C8FA279441D9008839CA /* Day2ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FDCB5522794DB7500D57F75 /* Day3ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3ContentView.swift; sourceTree = "<group>"; };
 		7FE5C8F727944150008839CA /* Day1ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1ContentView.swift; sourceTree = "<group>"; };
 		7FE5C8FA279441D9008839CA /* Day2ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,8 +80,9 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				7FE5C8F9279441D0008839CA /* day2 */,
 				7FE5C8F627944138008839CA /* day1 */,
+				7FE5C8F9279441D0008839CA /* day2 */,
+				7FDCB5512794DB6500D57F75 /* day3 */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* DashboardView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -94,6 +97,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FDCB5512794DB6500D57F75 /* day3 */ = {
+			isa = PBXGroup;
+			children = (
+				7FDCB5522794DB7500D57F75 /* Day3ContentView.swift */,
+			);
+			path = day3;
 			sourceTree = "<group>";
 		};
 		7FE5C8F627944138008839CA /* day1 */ = {
@@ -205,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				7FDCB5532794DB7500D57F75 /* Day3ContentView.swift in Sources */,
 				7555FF83242A565900829871 /* DashboardView.swift in Sources */,
 				7FE5C8FB279441D9008839CA /* Day2ContentView.swift in Sources */,
 				7FE5C8F827944150008839CA /* Day1ContentView.swift in Sources */,

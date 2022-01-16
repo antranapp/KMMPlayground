@@ -26,7 +26,7 @@ fun DashboardView(
     }
 
     val list = listOf(
-        "day1", "day2"
+        "day1", "day2", "day3"
     )
     LazyColumn(modifier = Modifier.fillMaxHeight()) {
         items(items = list, itemContent = { item ->
@@ -45,7 +45,13 @@ fun DashboardView(
                         route = "day2"
                     )
                 }
-                else -> {
+                "day3" -> {
+                    DashboardRow(
+                        navController = navController,
+                        title = "Day 3: Capitalise",
+                        route = "day3"
+                    )
+                }                else -> {
                     Text("invalid destination")
                 }
             }

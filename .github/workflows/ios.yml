@@ -1,0 +1,44 @@
+name: iOS
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "*.png"
+      - docs
+      - app
+  
+jobs:
+  build:
+    runs-on: macos-11
+    timeout-minutes: 15
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-java@v2
+        with:
+          distribution: "adopt"
+          java-version: "11"
+
+      - name: Prepare Xcode
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: Build Shared
+        run: ./gradlew :shared:build
+
+      - name: Prepare Cocoapods
+        run: |
+          xcodebuild -project iosApp.xcodeproj -scheme iosApp -destination "name=iPhone 13,platform=iOS Simulator,OS=latest" -configuration Debug -sdk iphonesimulator build
+        working-directory: iosApp

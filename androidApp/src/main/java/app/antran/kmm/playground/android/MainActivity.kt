@@ -11,7 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import app.antran.kmm.playground.Greeting
+import app.antran.kmm.playground.day1.Greeting
 
 fun greet(): String {
     return Greeting().greeting()

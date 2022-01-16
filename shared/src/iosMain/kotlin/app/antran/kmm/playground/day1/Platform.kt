@@ -1,4 +1,4 @@
-package app.antran.kmm.playground
+package app.antran.kmm.playground.day1
 
 import platform.UIKit.UIDevice
 

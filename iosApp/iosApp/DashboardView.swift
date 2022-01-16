@@ -13,6 +13,7 @@ struct DashboardView: View {
             List {
                 NavigationLink("Day 1: Greeting", destination: Day1ContentView())
                 NavigationLink("Day 2: Addition", destination: Day2ContentView())
+                NavigationLink("Day 3: Capitalise", destination: Day3ContentView())
             }
             .navigationTitle("KMM Playground")
         }

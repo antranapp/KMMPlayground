@@ -1,17 +1,16 @@
 package app.antran.kmm.playground.android
 
-import android.util.Log
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.*
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import app.antran.kmm.playground.android.day1.Day1ContentView
 import app.antran.kmm.playground.android.day2.Day2ContentView
+import app.antran.kmm.playground.android.day3.Day3ContentView
 
 @Composable
 fun AppView(destinationViewModel: NavDestinationViewModel = viewModel()) {
@@ -62,6 +61,10 @@ private fun DashboardNavHost(destinationViewModel: NavDestinationViewModel) {
 
         composable("day2") {
             Day2ContentView(destinationViewModel = destinationViewModel)
+        }
+
+        composable("day3") {
+            Day3ContentView(destinationViewModel = destinationViewModel)
         }
     }
 }

@@ -2,16 +2,16 @@
 // Copyright © 2022 An Tran. All rights reserved.
 //
 
+import PagerTabStripView
 import shared
 import SwiftUI
-import PagerTabStripView
 
 struct Day4ContentView: View {
     let callback = shared.FunctionCallback()
     
     var body: some View {
         VStack {
-            PagerTabStripView() {
+            PagerTabStripView {
                 IntFunctionView(callback: callback)
                     .pagerTabItem {
                         TitleBarView(title: "Int")

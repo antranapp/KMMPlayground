@@ -12,13 +12,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.sp
 import app.antran.kmm.playground.android.NavDestinationViewModel
-import app.antran.kmm.playground.day3.Capitalise
 import app.antran.kmm.playground.day4.FunctionCallback
 
 @Composable
 fun Day4ContentView(destinationViewModel: NavDestinationViewModel) {
     LaunchedEffect(Unit) {
-        destinationViewModel.setTitle("Day 3")
+        destinationViewModel.setTitle("Function Callback")
     }
 
     val callback = FunctionCallback()

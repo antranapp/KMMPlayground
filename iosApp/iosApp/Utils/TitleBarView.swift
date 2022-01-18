@@ -1,9 +1,5 @@
 //
-//  TitleBarView.swift
-//  iosApp
-//
-//  Created by An Tran on 19/1/22.
-//  Copyright © 2022 orgName. All rights reserved.
+// Copyright © 2022 An Tran. All rights reserved.
 //
 
 import Foundation

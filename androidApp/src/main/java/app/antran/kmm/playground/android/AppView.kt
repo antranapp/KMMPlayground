@@ -12,6 +12,7 @@ import app.antran.kmm.playground.android.days.day1.Day1ContentView
 import app.antran.kmm.playground.android.days.day2.Day2ContentView
 import app.antran.kmm.playground.android.days.day3.Day3ContentView
 import app.antran.kmm.playground.android.days.day4.Day4ContentView
+import app.antran.kmm.playground.android.days.day5.Day5ContentView
 
 @Composable
 fun AppView(destinationViewModel: NavDestinationViewModel = viewModel()) {
@@ -70,6 +71,10 @@ private fun DashboardNavHost(destinationViewModel: NavDestinationViewModel) {
 
         composable("day4") {
             Day4ContentView(destinationViewModel = destinationViewModel)
+        }
+
+        composable("day5") {
+            Day5ContentView(destinationViewModel = destinationViewModel)
         }
     }
 }

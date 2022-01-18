@@ -25,36 +25,13 @@ fun DashboardView(
         destinationViewModel.setTitle("KMM Playground")
     }
 
-    val list = listOf(
-        "day1", "day2", "day3"
-    )
     LazyColumn(modifier = Modifier.fillMaxHeight()) {
-        items(items = list, itemContent = { item ->
-            when(item) {
-                "day1" -> {
-                    DashboardRow(
-                        navController = navController,
-                        title = "Day 1: Greeting",
-                        route = "day1"
-                    )
-                }
-                "day2" -> {
-                    DashboardRow(
-                        navController = navController,
-                        title = "Day 2: Addition",
-                        route = "day2"
-                    )
-                }
-                "day3" -> {
-                    DashboardRow(
-                        navController = navController,
-                        title = "Day 3: Capitalise",
-                        route = "day3"
-                    )
-                }                else -> {
-                    Text("invalid destination")
-                }
-            }
+        items(items = days, itemContent = { day ->
+            DashboardRow(
+                navController = navController,
+                day = day
+            )
+
             Divider()
         })
     }
@@ -63,15 +40,14 @@ fun DashboardView(
 @Composable
 private fun DashboardRow(
     navController: NavHostController,
-    title: String,
-    route: String
+    day: Day
 ) {
     Row(
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
-            .clickable { navController.navigate(route) }
+            .clickable { navController.navigate(day.route) }
     ) {
-        Text(text = title)
+        Text(text = day.title)
     }
 }

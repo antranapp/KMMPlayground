@@ -1,4 +1,4 @@
-package app.antran.kmm.playground.android.day1
+package app.antran.kmm.playground.android.days.day1
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

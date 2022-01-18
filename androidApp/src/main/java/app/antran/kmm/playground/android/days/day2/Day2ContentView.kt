@@ -1,4 +1,4 @@
-package app.antran.kmm.playground.android.day2
+package app.antran.kmm.playground.android.days.day2
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,7 +15,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import app.antran.kmm.playground.android.NavDestinationViewModel
 import day2.Addition

@@ -10,13 +10,6 @@ struct Day1ContentView: View {
 
     var body: some View {
         Text(greet)
+            .navigationTitle("Greeting")
     }
 }
-
-#if DEBUG
-struct Day1ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Day1ContentView()
-    }
-}
-#endif

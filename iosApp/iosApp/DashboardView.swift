@@ -14,6 +14,7 @@ struct DashboardView: View {
                 NavigationLink("Day 1: Greeting", destination: Day1ContentView())
                 NavigationLink("Day 2: Addition", destination: Day2ContentView())
                 NavigationLink("Day 3: Capitalise", destination: Day3ContentView())
+                NavigationLink("Day 4: Function Callback", destination: Day4ContentView())
             }
             .navigationTitle("KMM Playground")
         }

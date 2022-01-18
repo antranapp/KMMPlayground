@@ -19,13 +19,6 @@ struct Day3ContentView: View {
                 .font(.system(size: 30))
         }
         .padding()
+        .navigationTitle("Capitalise")
     }
 }
-
-#if DEBUG
-struct Day3ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Day3ContentView()
-    }
-}
-#endif

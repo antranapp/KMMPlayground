@@ -8,9 +8,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import app.antran.kmm.playground.android.day1.Day1ContentView
-import app.antran.kmm.playground.android.day2.Day2ContentView
-import app.antran.kmm.playground.android.day3.Day3ContentView
+import app.antran.kmm.playground.android.days.day1.Day1ContentView
+import app.antran.kmm.playground.android.days.day2.Day2ContentView
+import app.antran.kmm.playground.android.days.day3.Day3ContentView
+import app.antran.kmm.playground.android.days.day4.Day4ContentView
 
 @Composable
 fun AppView(destinationViewModel: NavDestinationViewModel = viewModel()) {
@@ -65,6 +66,10 @@ private fun DashboardNavHost(destinationViewModel: NavDestinationViewModel) {
 
         composable("day3") {
             Day3ContentView(destinationViewModel = destinationViewModel)
+        }
+
+        composable("day4") {
+            Day4ContentView(destinationViewModel = destinationViewModel)
         }
     }
 }

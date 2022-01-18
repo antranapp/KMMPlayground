@@ -39,13 +39,6 @@ struct Day2ContentView: View {
                 .font(.system(size: 30))
         }
         .padding()
+        .navigationTitle("Addition")
     }
 }
-
-#if DEBUG
-struct Day2ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Day2ContentView()
-    }
-}
-#endif

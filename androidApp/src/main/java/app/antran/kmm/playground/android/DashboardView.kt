@@ -14,6 +14,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
@@ -48,6 +49,9 @@ private fun DashboardRow(
             .fillMaxWidth()
             .clickable { navController.navigate(day.route) }
     ) {
-        Text(text = day.title)
+        Text(
+            text = day.title,
+            fontSize = 18.sp
+        )
     }
 }

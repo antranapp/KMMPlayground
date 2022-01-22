@@ -18,7 +18,7 @@ fun greet(): String {
 @Composable
 fun Day1ContentView(destinationViewModel: NavDestinationViewModel) {
     LaunchedEffect(Unit) {
-        destinationViewModel.setTitle("Day 1")
+        destinationViewModel.setTitle("Greeting")
     }
 
     Column(

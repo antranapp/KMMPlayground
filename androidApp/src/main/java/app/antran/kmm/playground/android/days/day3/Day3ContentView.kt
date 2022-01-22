@@ -20,7 +20,7 @@ import app.antran.kmm.playground.day3.Capitalise
 fun Day3ContentView(destinationViewModel: NavDestinationViewModel) {
 
     LaunchedEffect(Unit) {
-        destinationViewModel.setTitle("Day 3")
+        destinationViewModel.setTitle("Capitalise")
     }
 
     val capitalise = Capitalise()

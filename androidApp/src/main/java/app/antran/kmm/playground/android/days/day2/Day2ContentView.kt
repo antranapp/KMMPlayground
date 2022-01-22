@@ -23,7 +23,7 @@ import day2.Addition
 fun Day2ContentView(destinationViewModel: NavDestinationViewModel) {
 
     LaunchedEffect(Unit) {
-        destinationViewModel.setTitle("Day 2")
+        destinationViewModel.setTitle("Addition")
     }
 
     val addition = Addition()

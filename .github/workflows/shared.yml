@@ -31,6 +31,16 @@ jobs:
           distribution: "adopt"
           java-version: "11"
 
+      # - name: Restore Cache
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: |
+      #       ~/.gradle/caches
+      #       ~/.gradle/wrapper
+      #     key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-gradle-
+
       - name: Build
         run: ./gradlew :shared:build
 

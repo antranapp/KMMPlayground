@@ -5,6 +5,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.*
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.activity
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -13,6 +14,8 @@ import app.antran.kmm.playground.android.days.day2.Day2ContentView
 import app.antran.kmm.playground.android.days.day3.Day3ContentView
 import app.antran.kmm.playground.android.days.day4.Day4ContentView
 import app.antran.kmm.playground.android.days.day5.Day5ContentView
+import app.antran.kmm.playground.android.days.day6.Day6Activity
+import app.antran.kmm.playground.android.days.day6.Day6ContentView
 
 @Composable
 fun AppView(destinationViewModel: NavDestinationViewModel = viewModel()) {
@@ -75,6 +78,11 @@ private fun DashboardNavHost(destinationViewModel: NavDestinationViewModel) {
 
         composable("day5") {
             Day5ContentView(destinationViewModel = destinationViewModel)
+        }
+
+        // https://developer.android.com/guide/navigation/navigation-kotlin-dsl#activity
+        activity("day6") {
+            activityClass = Day6Activity::class
         }
     }
 }

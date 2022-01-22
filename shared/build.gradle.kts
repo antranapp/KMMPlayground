@@ -2,11 +2,14 @@ plugins {
     id("com.android.library")
     kotlin("multiplatform")
     kotlin("plugin.serialization")
+    id("com.squareup.sqldelight")
 }
 
 val coroutinesVersion = "1.6.0"
 val serializationVersion = "1.3.1"
 val ktorVersion = "1.6.7"
+val sqlDelightVersion = "1.5.3"
+val kermitVersion = "1.0.2"
 
 kotlin {
     android()
@@ -29,6 +32,11 @@ kotlin {
 
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+
+                implementation("com.squareup.sqldelight:runtime:$sqlDelightVersion")
+
+//                implementation(kotlin("stdlib-common"))
+//                implementation("co.touchlab:kermit:$kermitVersion")
             }
         }
         val commonTest by getting {
@@ -40,6 +48,8 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
+
+                implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
             }
         }
         val androidTest by getting {
@@ -59,6 +69,8 @@ kotlin {
 
             dependencies {
                 implementation("io.ktor:ktor-client-ios:$ktorVersion")
+
+                implementation("com.squareup.sqldelight:native-driver:$sqlDelightVersion")
             }
         }
         val iosX64Test by getting
@@ -79,5 +91,11 @@ android {
     defaultConfig {
         minSdk = 26
         targetSdk = 32
+    }
+}
+
+sqldelight {
+    database("AppDatabase") {
+        packageName = "app.antran.kmm.playground.shared.day6.cache"
     }
 }

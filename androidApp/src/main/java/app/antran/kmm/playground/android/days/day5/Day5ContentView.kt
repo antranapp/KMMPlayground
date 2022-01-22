@@ -33,7 +33,6 @@ fun Day5ContentView(destinationViewModel: NavDestinationViewModel) {
 
     val viewModel = viewModel<TodosViewModel>()
 
-
     Column(
         Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,
@@ -83,7 +82,7 @@ fun TodoRowView(todo: Todo) {
     }
 }
 
-class TodosViewModel: ViewModel() {
+internal class TodosViewModel: ViewModel() {
     sealed class State {
         object Loading: State()
         data class Data(val todos: List<Todo>): State()

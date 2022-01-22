@@ -1,0 +1,16 @@
+CREATE TABLE Todo (
+    id INTEGER AS Int NOT NULL PRIMARY KEY,
+    userId INTEGER AS Int NOT NULL,
+    title TEXT NOT NULL,
+    completed INTEGER AS Boolean NOT NULL DEFAULT 0
+);
+
+insertTodo:
+INSERT INTO Todo(id, userId, title, completed)
+VALUES(?, ?, ?, ?);
+
+selectAllTodos:
+SELECT * FROM Todo;
+
+removeAllTodos:
+DELETE FROM Todo;

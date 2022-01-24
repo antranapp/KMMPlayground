@@ -9,7 +9,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import app.antran.kmm.playground.android.NavDestinationViewModel
-import app.antran.kmm.playground.day1.Greeting
+import app.antran.kmm.playground.days.day1.Greeting
 
 fun greet(): String {
     return Greeting().greeting()

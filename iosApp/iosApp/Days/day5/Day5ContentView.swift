@@ -6,7 +6,7 @@ import shared
 import SwiftUI
 
 struct Day5ContentView: View {
-    @StateObject private var viewModel = ViewModel()
+    @StateObject private var viewModel = TodosViewModel()
     
     var body: some View {
         VStack {
@@ -28,32 +28,13 @@ struct Day5ContentView: View {
     }
 }
 
-private struct TodoRowView: View {
+struct TodoRowView: View {
     let todo: Todo
     
     var body: some View {
         HStack {
             Image(systemName: todo.completed ? "checkmark.circle.fill" : "circle")
             Text(todo.title)
-        }
-    }
-}
-
-private extension Day5ContentView {
-    class ViewModel: ObservableObject {
-        private let sdk = shared.TodoSDK()
-        
-        @Published var state: ViewState<[Todo]> = .loading
-        
-        func load() {
-            state = .loading
-            sdk.getTodos { [weak self] todos, error in
-                if let todos = todos {
-                    self?.state = .loaded(todos)
-                } else {
-                    self?.state = .error
-                }
-            }
         }
     }
 }

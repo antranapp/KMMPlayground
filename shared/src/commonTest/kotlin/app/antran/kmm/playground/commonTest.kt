@@ -1,6 +1,6 @@
 package app.antran.kmm.playground
 
-import app.antran.kmm.playground.day1.Greeting
+import app.antran.kmm.playground.days.day1.Greeting
 import kotlin.test.Test
 import kotlin.test.assertTrue
 

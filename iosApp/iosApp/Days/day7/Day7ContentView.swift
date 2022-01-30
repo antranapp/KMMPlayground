@@ -37,7 +37,7 @@ struct Day7ContentView: View {
                 )
             }
         }
-        .navigationTitle("SqlDelight Caching")
+        .navigationTitle("RSS Reader")
     }
 }
 

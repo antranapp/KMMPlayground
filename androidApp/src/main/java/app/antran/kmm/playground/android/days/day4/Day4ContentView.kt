@@ -12,7 +12,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.sp
 import app.antran.kmm.playground.android.NavDestinationViewModel
-import app.antran.kmm.playground.day4.FunctionCallback
+import app.antran.kmm.playground.days.day4.FunctionCallback
 
 @Composable
 fun Day4ContentView(destinationViewModel: NavDestinationViewModel) {

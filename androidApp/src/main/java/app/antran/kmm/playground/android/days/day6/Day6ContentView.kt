@@ -19,9 +19,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.antran.kmm.playground.android.days.day5.TodoListView
-import app.antran.kmm.playground.day5.entity.Todo
-import app.antran.kmm.playground.day6.DatabaseDriverFactory
-import app.antran.kmm.playground.day6.TodoWithCacheSDK
+import app.antran.kmm.playground.days.day5.entity.Todo
+import app.antran.kmm.playground.days.day6.DatabaseDriverFactory
+import app.antran.kmm.playground.days.day6.TodoWithCacheSDK
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -79,8 +79,8 @@ internal class TodosViewModel(context: Context): ViewModel() {
         data class Error(val error: String): State()
     }
 
-    private var todoWithCacheSDK = TodoWithCacheSDK(DatabaseDriverFactory(context = context))
-    private var _state = MutableStateFlow<State>(State.Loading)
+    private val todoWithCacheSDK = TodoWithCacheSDK(DatabaseDriverFactory(context = context))
+    private val _state = MutableStateFlow<State>(State.Loading)
     val state = _state.asStateFlow()
 
     init {

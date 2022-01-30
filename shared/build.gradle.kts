@@ -10,6 +10,8 @@ val serializationVersion = "1.3.1"
 val ktorVersion = "1.6.7"
 val sqlDelightVersion = "1.5.3"
 val kermitVersion = "1.0.2"
+val settingsVersion =  "0.8.1"
+val napierVersion = "2.3.0"
 
 kotlin {
     android()
@@ -27,16 +29,23 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                // Networking
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion-native-mt")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
-
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
+
+                // Serialization
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
 
+                // SQLite
                 implementation("com.squareup.sqldelight:runtime:$sqlDelightVersion")
 
-//                implementation(kotlin("stdlib-common"))
-//                implementation("co.touchlab:kermit:$kermitVersion")
+                // Settings/Preferences
+                implementation("com.russhwolf:multiplatform-settings:$settingsVersion")
+
+                // Logging
+                implementation("io.github.aakira:napier:$napierVersion")
             }
         }
         val commonTest by getting {
@@ -47,8 +56,11 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                // Networking
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
 
+                // SQLite
                 implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
             }
         }
@@ -68,8 +80,10 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
 
             dependencies {
+                // Networking
                 implementation("io.ktor:ktor-client-ios:$ktorVersion")
 
+                // SQLite
                 implementation("com.squareup.sqldelight:native-driver:$sqlDelightVersion")
             }
         }

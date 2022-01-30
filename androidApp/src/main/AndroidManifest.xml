@@ -26,5 +26,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".days.day7.Day7Activity"
+            android:label="Day7Activity"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest> 

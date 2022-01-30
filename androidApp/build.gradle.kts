@@ -4,6 +4,7 @@ plugins {
 }
 
 val composeVersion = "1.2.0-alpha01"
+val coilVersion = "2.0.0-alpha06"
 
 android {
     compileSdk = 32
@@ -45,4 +46,7 @@ dependencies {
     implementation("androidx.compose.material:material:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
+
+    implementation("io.coil-kt:coil-compose:$coilVersion")
+
 }

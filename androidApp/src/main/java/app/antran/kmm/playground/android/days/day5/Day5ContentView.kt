@@ -19,8 +19,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.antran.kmm.playground.android.NavDestinationViewModel
-import app.antran.kmm.playground.day5.TodoSDK
-import app.antran.kmm.playground.day5.entity.Todo
+import app.antran.kmm.playground.days.day5.TodoSDK
+import app.antran.kmm.playground.days.day5.entity.Todo
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch

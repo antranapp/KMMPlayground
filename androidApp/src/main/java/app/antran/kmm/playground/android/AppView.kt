@@ -16,6 +16,7 @@ import app.antran.kmm.playground.android.days.day4.Day4ContentView
 import app.antran.kmm.playground.android.days.day5.Day5ContentView
 import app.antran.kmm.playground.android.days.day6.Day6Activity
 import app.antran.kmm.playground.android.days.day6.Day6ContentView
+import app.antran.kmm.playground.android.days.day7.Day7Activity
 
 @Composable
 fun AppView(destinationViewModel: NavDestinationViewModel = viewModel()) {
@@ -83,6 +84,10 @@ private fun DashboardNavHost(destinationViewModel: NavDestinationViewModel) {
         // https://developer.android.com/guide/navigation/navigation-kotlin-dsl#activity
         activity("day6") {
             activityClass = Day6Activity::class
+        }
+
+        activity("day7") {
+            activityClass = Day7Activity::class
         }
     }
 }

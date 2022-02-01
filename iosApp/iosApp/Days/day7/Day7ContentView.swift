@@ -5,9 +5,12 @@
 import Foundation
 import SwiftUI
 import shared
+import BetterSafariView
 
 struct Day7ContentView: View {
     @StateObject private var viewModel = Day7FeedViewModel()
+    
+    @State private var url: URL?
     
     var body: some View {
         VStack {
@@ -22,14 +25,33 @@ struct Day7ContentView: View {
             case .loaded(let posts):
                 ScrollView {
                     LazyVStack {
-                        ForEach(posts, id: \.self) {
-                            PostRowView(post: $0)
-                            
+                        ForEach(posts, id: \.self) { post in
+                            PostRowView(post: post)
+                                .onTapGesture {
+                                    post.link.map {
+                                        url = URL(string: $0)
+                                    }
+                                }
                             Divider()
                         }
                     }
                 }
             }
+        }
+        .safariView(
+            item: $url,
+            onDismiss: {
+                url = nil
+            }
+        ) { url in
+            SafariView(
+                url: url,
+                configuration: SafariView.Configuration(
+                    entersReaderIfAvailable: false,
+                    barCollapsingEnabled: true
+                )
+            )
+            .dismissButtonStyle(.done)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

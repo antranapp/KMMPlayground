@@ -10,16 +10,16 @@ import Foundation
 import shared
 import Combine
 
-class FeedViewModel: ObservableObject {
+class Day7FeedViewModel: ObservableObject {
     private let rssReader = shared.RssReader.Companion().create(withLog: true)
     
-    @Published var state: ViewState<Feed> = .loading
+    @Published var state: ViewState<[Post]> = .loading
     
     func load() {
         state = .loading
         rssReader.getAllFeeds { [weak self] feed, error in
             if let feed = feed {
-                self?.state = .loaded(feed)
+                self?.state = .loaded(feed.posts)
             } else {
                 self?.state = .error
             }

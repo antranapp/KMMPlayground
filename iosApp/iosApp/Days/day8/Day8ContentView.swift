@@ -6,8 +6,8 @@ import Foundation
 import SwiftUI
 import shared
 
-struct Day7ContentView: View {
-    @StateObject private var viewModel = Day7FeedViewModel()
+struct Day8ContentView: View {
+    @StateObject private var viewModel = Day8FeedViewModel()
     
     var body: some View {
         VStack {
@@ -43,35 +43,6 @@ struct Day7ContentView: View {
                 )
             }
         }
-        .navigationTitle("RSS Reader")
-    }
-}
-
-struct PostRowView: View {
-    let post: Post
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(post.title)
-                .font(.title)
-            if let imageUrl = post.imageUrl,
-               let url = URL(string: imageUrl) {
-                AsyncImage(url: url) { phase in
-                    if let image = phase.image {
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    } else if phase.error != nil {
-                        Color.red // Indicates an error.
-                    } else {
-                        Color.blue // Acts as a placeholder.
-                    }
-                }
-            }
-            if let description = post.desc {
-                Text(description)
-            }
-        }
-        .padding()
+        .navigationTitle("Multisource RSS Reader")
     }
 }

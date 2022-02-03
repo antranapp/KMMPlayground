@@ -6,6 +6,6 @@ import Foundation
 
 enum ViewState<T> {
     case loading
-    case error
+    case error(_ error: Error? = nil)
     case loaded(_ data: T)
 }

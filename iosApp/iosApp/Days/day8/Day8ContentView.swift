@@ -20,8 +20,8 @@ struct Day8ContentView: View {
                     .onAppear {
                         viewModel.load()
                     }
-            case .error:
-                Text("Error!")
+            case .error(let error):
+                Text("Error! \(error.debugDescription)")
             case .loaded(let posts):
                 ScrollView {
                     LazyVStack {

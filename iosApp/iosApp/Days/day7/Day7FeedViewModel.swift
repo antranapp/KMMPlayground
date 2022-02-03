@@ -21,7 +21,7 @@ class Day7FeedViewModel: ObservableObject {
             if let feed = feed {
                 self?.state = .loaded(feed.posts)
             } else {
-                self?.state = .error
+                self?.state = .error(error)
             }
         }
     }

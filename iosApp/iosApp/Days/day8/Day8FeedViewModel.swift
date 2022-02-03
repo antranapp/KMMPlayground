@@ -21,7 +21,7 @@ class Day8FeedViewModel: ObservableObject {
                 let posts = feeds.flatMap(\.posts)
                 self?.state = .loaded(posts)
             } else {
-                self?.state = .error
+                self?.state = .error(error)
             }
         }
     }

@@ -9,7 +9,11 @@ import io.ktor.client.request.*
 class TodoApi {
     private val httpClient = HttpClient {
         install(JsonFeature) {
-            serializer = KotlinxSerializer()
+            val json = kotlinx.serialization.json.Json {
+                ignoreUnknownKeys = true
+                useAlternativeNames = false
+            }
+            serializer = KotlinxSerializer(json)
         }
     }
 

@@ -13,7 +13,7 @@ internal fun IosHttpClient(withLog: Boolean) = HttpClient(Ios) {
         }
     }
     if (withLog) install(Logging) {
-        level = LogLevel.HEADERS
+        level = LogLevel.INFO
         logger = object : Logger {
             override fun log(message: String) {
                 Napier.v(tag = "IosHttpClient", message = message)

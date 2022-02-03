@@ -20,6 +20,7 @@ fun RssReader2.Companion.create(ctx: Context, withLog: Boolean = false) = RssRea
     FeedStorage(
         AndroidSettings(ctx.getSharedPreferences("rss_reader_pref", Context.MODE_PRIVATE)),
         Json {
+            useAlternativeNames = false
             ignoreUnknownKeys = true
             isLenient = true
             encodeDefaults = false

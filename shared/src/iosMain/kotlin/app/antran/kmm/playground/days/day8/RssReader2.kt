@@ -20,6 +20,7 @@ fun RssReader2.Companion.create(withLog: Boolean = false) = RssReader2(
     FeedStorage(
         AppleSettings(NSUserDefaults.standardUserDefaults()),
         Json {
+            useAlternativeNames = false
             ignoreUnknownKeys = true
             isLenient = true
             encodeDefaults = false

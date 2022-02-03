@@ -18,6 +18,7 @@ struct DashboardView: View {
                 NavigationLink("Day 5: Ktor Network", destination: Day5ContentView())
                 NavigationLink("Day 6: SqlDelight Caching", destination: Day6ContentView())
                 NavigationLink("Day 7: RssReader", destination: Day7ContentView())
+                NavigationLink("Day 8: Multisources RssReader", destination: Day8ContentView())
             }
             .navigationTitle("KMM Playground")
         }

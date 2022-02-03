@@ -17,7 +17,7 @@ class TodosViewModel: ObservableObject {
             if let todos = todos {
                 self?.state = .loaded(todos)
             } else {
-                self?.state = .error
+                self?.state = .error(error)
             }
         }
     }

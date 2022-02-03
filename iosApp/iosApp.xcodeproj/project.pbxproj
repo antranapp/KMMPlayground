@@ -11,10 +11,13 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* DashboardView.swift */; };
+		7F02252427A9F6B300E98006 /* Day8ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02252327A9F6B300E98006 /* Day8ContentView.swift */; };
+		7F02252627A9F6C400E98006 /* Day8FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02252527A9F6C400E98006 /* Day8FeedViewModel.swift */; };
+		7F02252B27A9F89800E98006 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 7F02252A27A9F89800E98006 /* BetterSafariView */; };
 		7F3C2C07279FCDCF00FA9F5D /* Day6ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C2C06279FCDCF00FA9F5D /* Day6ContentView.swift */; };
 		7F3C2C09279FCE3C00FA9F5D /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C2C08279FCE3C00FA9F5D /* TodosViewModel.swift */; };
 		7F3C2C0C279FD16E00FA9F5D /* Day7ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C2C0B279FD16E00FA9F5D /* Day7ContentView.swift */; };
-		7F3C2C0E279FD1A200FA9F5D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C2C0D279FD1A200FA9F5D /* FeedViewModel.swift */; };
+		7F3C2C0E279FD1A200FA9F5D /* Day7FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C2C0D279FD1A200FA9F5D /* Day7FeedViewModel.swift */; };
 		7F80178D279A125F008F0E01 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80178C279A125F008F0E01 /* ViewState.swift */; };
 		7FCDF5532797719F00E50CB4 /* Day4ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCDF5522797719F00E50CB4 /* Day4ContentView.swift */; };
 		7FCDF556279778F000E50CB4 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 7FCDF555279778F000E50CB4 /* PagerTabStripView */; };
@@ -45,10 +48,12 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F02252327A9F6B300E98006 /* Day8ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8ContentView.swift; sourceTree = "<group>"; };
+		7F02252527A9F6C400E98006 /* Day8FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8FeedViewModel.swift; sourceTree = "<group>"; };
 		7F3C2C06279FCDCF00FA9F5D /* Day6ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6ContentView.swift; sourceTree = "<group>"; };
 		7F3C2C08279FCE3C00FA9F5D /* TodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
 		7F3C2C0B279FD16E00FA9F5D /* Day7ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7ContentView.swift; sourceTree = "<group>"; };
-		7F3C2C0D279FD1A200FA9F5D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		7F3C2C0D279FD1A200FA9F5D /* Day7FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7FeedViewModel.swift; sourceTree = "<group>"; };
 		7F80178C279A125F008F0E01 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		7FCDF5522797719F00E50CB4 /* Day4ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4ContentView.swift; sourceTree = "<group>"; };
 		7FCDF55927977A9E00E50CB4 /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FCDF556279778F000E50CB4 /* PagerTabStripView in Frameworks */,
+				7F02252B27A9F89800E98006 /* BetterSafariView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +122,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7F02252227A9F6A500E98006 /* day8 */ = {
+			isa = PBXGroup;
+			children = (
+				7F02252327A9F6B300E98006 /* Day8ContentView.swift */,
+				7F02252527A9F6C400E98006 /* Day8FeedViewModel.swift */,
+			);
+			path = day8;
+			sourceTree = "<group>";
+		};
 		7F3C2C05279FCD9700FA9F5D /* day6 */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7F3C2C0B279FD16E00FA9F5D /* Day7ContentView.swift */,
-				7F3C2C0D279FD1A200FA9F5D /* FeedViewModel.swift */,
+				7F3C2C0D279FD1A200FA9F5D /* Day7FeedViewModel.swift */,
 			);
 			path = day7;
 			sourceTree = "<group>";
@@ -160,6 +175,7 @@
 				7FDE35042798D476009F5EA7 /* day5 */,
 				7F3C2C05279FCD9700FA9F5D /* day6 */,
 				7F3C2C0A279FD14600FA9F5D /* day7 */,
+				7F02252227A9F6A500E98006 /* day8 */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -217,6 +233,7 @@
 			name = iosApp;
 			packageProductDependencies = (
 				7FCDF555279778F000E50CB4 /* PagerTabStripView */,
+				7F02252A27A9F89800E98006 /* BetterSafariView */,
 			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* iosApp.app */;
@@ -248,6 +265,7 @@
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
 				7FCDF554279778F000E50CB4 /* XCRemoteSwiftPackageReference "PagerTabStripView" */,
+				7F02252927A9F89800E98006 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -299,6 +317,8 @@
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7FDE35062798D487009F5EA7 /* Day5ContentView.swift in Sources */,
 				7F3C2C0C279FD16E00FA9F5D /* Day7ContentView.swift in Sources */,
+				7F02252427A9F6B300E98006 /* Day8ContentView.swift in Sources */,
+				7F02252627A9F6C400E98006 /* Day8FeedViewModel.swift in Sources */,
 				7FDCB5532794DB7500D57F75 /* Day3ContentView.swift in Sources */,
 				7FCDF5532797719F00E50CB4 /* Day4ContentView.swift in Sources */,
 				7555FF83242A565900829871 /* DashboardView.swift in Sources */,
@@ -307,7 +327,7 @@
 				7FE5C8FB279441D9008839CA /* Day2ContentView.swift in Sources */,
 				7F3C2C09279FCE3C00FA9F5D /* TodosViewModel.swift in Sources */,
 				7FE5C8F827944150008839CA /* Day1ContentView.swift in Sources */,
-				7F3C2C0E279FD1A200FA9F5D /* FeedViewModel.swift in Sources */,
+				7F3C2C0E279FD1A200FA9F5D /* Day7FeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +526,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7F02252927A9F89800E98006 /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		7FCDF554279778F000E50CB4 /* XCRemoteSwiftPackageReference "PagerTabStripView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xmartlabs/PagerTabStripView.git";
@@ -517,6 +545,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7F02252A27A9F89800E98006 /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F02252927A9F89800E98006 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
 		7FCDF555279778F000E50CB4 /* PagerTabStripView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7FCDF554279778F000E50CB4 /* XCRemoteSwiftPackageReference "PagerTabStripView" */;

@@ -5,6 +5,8 @@ plugins {
 
 val composeVersion = "1.2.0-alpha01"
 val coilVersion = "2.0.0-alpha06"
+val accompanistVersion = "0.22.0-rc"
+val voyagerVersion = "1.0.0-beta15"
 
 android {
     compileSdk = 32
@@ -47,6 +49,9 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
 
+    implementation("com.google.accompanist:accompanist-insets:$accompanistVersion")
+
     implementation("io.coil-kt:coil-compose:$coilVersion")
 
+    implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
 }

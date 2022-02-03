@@ -1,7 +1,6 @@
 package app.antran.kmm.playground.days.day7
 
 import app.antran.kmm.playground.days.day7.datasource.network.FeedLoader
-import com.russhwolf.settings.AppleSettings
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
 

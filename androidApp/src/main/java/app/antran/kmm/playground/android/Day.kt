@@ -9,5 +9,6 @@ val days = listOf(
     Day(title = "Day 4: Function Callback", route = "day4"),
     Day(title = "Day 5: Ktor Network", route = "day5"),
     Day(title = "Day 6: SqlDelight Caching", route = "day6"),
-    Day(title = "Day 7: RSS Reader", route = "day7")
+    Day(title = "Day 7: RSS Reader", route = "day7"),
+    Day(title = "Day 8: Multisources RSS Reader", route = "day8")
 )

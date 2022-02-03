@@ -22,12 +22,16 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import app.antran.kmm.playground.days.day7.RssReader
 import app.antran.kmm.playground.days.day7.create
 import app.antran.kmm.playground.days.day7.entity.Feed
+import app.antran.kmm.playground.days.day7.entity.Post
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 @Composable
-fun Day7ContentView(onExitClick: () -> Unit) {
+fun Day7ContentView(
+    onExitClick: () -> Unit,
+    onPostClick: (Post) -> Unit
+) {
     val viewModel: RssReaderViewModel = viewModel(factory =  RssReaderViewModelFactory(context = LocalContext.current))
 
     Scaffold(
@@ -65,7 +69,7 @@ fun Day7ContentView(onExitClick: () -> Unit) {
                         modifier = Modifier.weight(1f),
                         posts = state.feed.posts,
                         listState = listState
-                    ) {  }
+                    ) { onPostClick(it) }
                 }
             }
         }

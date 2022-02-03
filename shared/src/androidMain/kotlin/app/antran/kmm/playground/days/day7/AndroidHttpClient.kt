@@ -14,7 +14,7 @@ internal fun AndroidHttpClient(withLog: Boolean) = HttpClient(OkHttp) {
         }
     }
     if (withLog) install(Logging) {
-        level = LogLevel.HEADERS
+        level = LogLevel.INFO
         logger = object : Logger {
             override fun log(message: String) {
                 Napier.v(tag = "AndroidHttpClient", message = message)
